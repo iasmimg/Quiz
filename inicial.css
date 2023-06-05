@@ -1,14 +1,17 @@
 .principal
     {
-        background-color: rgb(167, 121, 127);
-   
+        background-color: rgb(224, 222, 223);
+        margin-top: 30px;
         text-align: center;
         color: black;  
-        font-family: 'Courier New', Courier, monospace;    
+        font-family: Arial, Helvetica, sans-serif;   
     }
     .nome
     {
 
+        margin-top: 30px;
+    }
+    .imgcategorias{
         margin-top: 30px;
     }
             
@@ -21,17 +24,22 @@
     background-color:rgb(7, 7, 7);
     width: 100%;
     text-align: left;
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 13px;
+    font-weight: bold;
 
     }
-    .desenvolv{
-    color: aliceblue;
-    background-color:rgb(7, 7, 7);
-    width: 100%;
-    text-align:right;
-    font-family: Arial, Helvetica, sans-serif
+   .footerright{
+       float: right;
+   }
 
-    }
+   .footerleft{
+    float: left;
+}
 .p
     {
         text-align: right;

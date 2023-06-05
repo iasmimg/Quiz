@@ -14,30 +14,37 @@
         <h1>
             QUAL É A MÚSICA?
         </h1>
-        <img src="qualmusica.png" class="img-fluid" alt="..." width="600px" > <br>
-
         <p class= "nome"> 
         <label for="nome">Digite seu nome: </label> 
         <input type="text" name="nome" id="nome"/>
          <button type="button" class="btn btn-primary ">Jogar</button>
         </p>
-
+        
+        <label for="categoria">Escolha a Categoria:</label> <br>
+        <div class="imgcategorias">
+        <img src="pop.jpg" class="img-thumbnail" alt="..." width="300px">
+        <img src="sertanejo.jpg" class="img-thumbnail" alt="..." width="300px">
+        <img src="trap.jpg" class="img-thumbnail" alt="..." width="300px">
+        </div>
         
         </form>
     </div>
 <footer>
-<p> Trabalho para desciplina de Programação pra Internet <br>
+ <div class="footerleft">
+ Trabalho para disciplina de Programação pra Internet <br>
     Professor: Éberton Marinho <br>
     Unidade 1
-            
-</p>
-<article>
-<p class="desenvolv">Desenvolvedores <br>
+ </div>           
+
+
+<div class="footerright">
+ Desenvolvedores <br>
 Alexandra Galvão - alexandra.galvao@escolar.ifrn.edu.br <br>
 Eliel Ewerton - eliel.ewerton@escolar.ifrn.edu.br <br>
 Iasmim Dias - iasmim.dias@escolar.ifrn.edu.br <br>
 João Victor Lima - victor.lima@escolar.ifrn.edu.br <br>
-Kaliny Gomes - kaliny.g@escolar.ifrn.edu.br</p>
+Kaliny Gomes - kaliny.g@escolar.ifrn.edu.br
+</div>
 
 
 </footer>
