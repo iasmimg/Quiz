@@ -1,6 +1,6 @@
 .principal
     {
-        background-color: rgb(224, 222, 223);
+        background-color: rgb(255, 255, 255);
         margin-top: 30px;
         text-align: center;
         color: black;  
@@ -12,7 +12,7 @@
         margin-top: 30px;
     }
     .imgcategorias{
-        margin-top: 30px;
+        margin-top: 50px;
     }
             
     footer{
@@ -20,7 +20,7 @@
     position: fixed;
     bottom:0;
     left:0;
-    color: aliceblue;
+    color: white;
     background-color:rgb(7, 7, 7);
     width: 100%;
     text-align: left;
