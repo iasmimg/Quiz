@@ -5,7 +5,8 @@
     $msg = '';
     $ordemq = 0;
     $placar = 0;
-
+    $musi=array("musica01.mp3","02LuisV.mp3","03PerdoaPorTudoVida.mp3","04CartaoBlack.mp3","05VestidodaFendi.mp3","06AmaOJeitoQueMeOdeia.mp3","07Vampiro.mp3", "08Quervoar.mp3",
+    "09ConexoesdeMafia.mp3", "10BercodoTrap.mp3");
     #Q1
     $questao[0]['perguntas'] = "Quem canta essa música?";
     $questao[0][0] = array("MC Cabelinho, Baco Exu do Blues e Delacruz", true);
@@ -102,6 +103,7 @@
         if (isset($_POST["placar"])){
             $placar = $_POST["placar"] + 10;
         } else {
+           
         }
         
     }
@@ -109,6 +111,7 @@
     function exibirQuestao($ordem){
         global $questao;
         global $msg;
+        global $musi;
     
 ?>
 
@@ -116,16 +119,7 @@
 
     <div class="box">
         <img class="capa" src="trap.jpg" alt="">
-        <audio class="audio" src="01Intenção.mp3" controls <?php echo $questao[$ordem][0][0];?>]></audio></p>
-        <audio class="audio" src="02LuisV.mp3" controls <?php echo $questao[$ordem][1][0];?>]></audio></p>
-        <audio class="audio" src="03PerdoaPortudoVida.mp3" controls <?php echo $questao[$ordem][2][0];?>]></audio></p>
-        <audio class="audio" src="04CartaoBlack.mp3" controls <?php echo $questao[$ordem][3][0];?>]></audio></p>
-        <audio class="audio" src="05VestidodaFendi.mp3" controls <?php echo $questao[$ordem][4][0];?>]></audio></p>
-        <audio class="audio" src="06AmaOJeitoQueMeOdeia.mp3" controls <?php echo $questao[$ordem][5][0];?>]></audio></p>
-        <audio class="audio" src="07Vampiro.mp3" controls <?php echo $questao[$ordem][6][0];?>]></audio></p>
-        <audio class="audio" src="08Quervoar.mp3" controls <?php echo $questao[$ordem][7][0];?>]></audio></p>
-        <audio class="audio" src="01ConexoesdeMafia.mp3" controls <?php echo $questao[$ordem][8][0];?>]></audio></p>
-        <audio class="audio" src="10BercodoTrap.mp3" controls <?php echo $questao[$ordem][9][0];?>]></audio></p>
+        <audio class="audio" src="<?php echo $musi[$ordem];?>" controls <?php echo $questao[$ordem][0][0];?>]></audio></p>
     </div>
 
     <h3><input type="radio" name="questao" value="1"/><?php echo $questao[$ordem][0][0]; ?>  <br/>
