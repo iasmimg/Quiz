@@ -211,7 +211,16 @@
        float: left;
    }
 </style>
- 
+<body class="musica">
+    <form method = "POST" action="Trap_1.php">
+    
+            <input type="text" name="ordemq" value="<?php echo $ordemq ?>"/>
+            <?php exibirQuestao( $ordemq) ?>
+
+            <input type="text" name="placar" value="<?php echo $placar ?>"/>
+            <?php exibirPlacar($placar)?>
+        
+    </form>
 
     
 <footer>
