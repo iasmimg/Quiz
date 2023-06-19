@@ -180,6 +180,31 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    footer{
+       
+       position: fixed;
+       bottom:0;
+       left:0;
+       color: white;
+       background-color:rgb(7, 7, 7);
+       width: 100%;
+       text-align: left;
+       font-family:Arial, Helvetica, sans-serif;
+       padding-top: 10px;
+       padding-left: 20px;
+       padding-right: 20px;
+       padding-bottom: 10px;
+       font-size: 13px;
+       font-weight: bold;
+   
+       }
+      .footerright{
+          float: right;
+      }
+   
+      .footerleft{
+       float: left;
+   }
 </style>
 <body class="musica">
     <form method = "POST" action="Sertanejo.php">
@@ -191,5 +216,26 @@
             <?php exibirPlacar($placar)?>
         
     </form>
+
+    <footer>
+ <div class="footerleft">
+ Trabalho para disciplina de Programação pra Internet <br>
+    Professor: Éberton Marinho <br>
+    Unidade 1
+ </div>           
+
+
+<div class="footerright">
+ Desenvolvedores <br>
+Alexandra Galvão - alexandra.galvao@escolar.ifrn.edu.br <br>
+Eliel Ewerton - eliel.ewerton@escolar.ifrn.edu.br <br>
+Iasmim Dias - iasmim.dias@escolar.ifrn.edu.br <br>
+João Victor Lima - victor.lima@escolar.ifrn.edu.br <br>
+Kaliny Gomes - kaliny.g@escolar.ifrn.edu.br
+</div>
+
+
+</footer>
+
 </body>
 </html>
