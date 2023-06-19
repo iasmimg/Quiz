@@ -17,7 +17,7 @@
         <p class= "nome"> 
         <label for="nome">Digite seu nome: </label> 
         <input type="text" name="nome" id="nome"/>
-        <button type="button" class="btn btn-primary "><a href="categoria.html">Jogar</a></button>
+        <button type="button" class="btn btn-primary "><a href="categoria.html"><p class="botao">Jogar</p></a></button>
         </p>
       
         

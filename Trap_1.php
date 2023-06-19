@@ -90,20 +90,14 @@
 
         $msg = " " . $placar + 10;
         $resposta = "  " . $resposta;
+        $placar = $_POST["placar"];
 
-        if($questao1 == 1 ){
+        #PLACAR      
+        if($questao[$ordemq-1][$questao1][1] == true){
             $msg = "Parabéns, Você Ganhou 10 Pontos!!";
-    
-        } else if(
-            $questao1 == 0){
-            $msg = "Que Pena, Você Errou :(";
-        }
-
-        #PLACAR
-        if (isset($_POST["placar"])){
             $placar = $_POST["placar"] + 10;
-        } else {
-           
+        }else{
+            $msg = "Que Pena, Você Errou :(";
         }
         
     }
@@ -122,10 +116,10 @@
         <audio class="audio" src="<?php echo $musi[$ordem];?>" controls <?php echo $questao[$ordem][0][0];?>]></audio></p>
     </div>
 
-    <h3><input type="radio" name="questao" value="1"/><?php echo $questao[$ordem][0][0]; ?>  <br/>
-    <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][1][0]; ?> <br/>
-    <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][2][0]; ?> <br/>
-    <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][3][0]; ?> <br/></p></h3>
+    <h3><input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][0][0]; ?>  <br/>
+    <input type="radio" name="questao" value="1"/><?php echo $questao[$ordem][1][0]; ?> <br/>
+    <input type="radio" name="questao" value="2"/><?php echo $questao[$ordem][2][0]; ?> <br/>
+    <input type="radio" name="questao" value="3"/><?php echo $questao[$ordem][3][0]; ?> <br/></p></h3>
 
 
 
