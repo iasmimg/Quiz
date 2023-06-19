@@ -1,15 +1,17 @@
+
 <?php
     $resposta = 1;
     $placar = 0;
     $msg = '';
     $ordemq = 0;
+    $placar = 0;
 
     #Q1
     $questao[0]['perguntas'] = "Quem canta essa música?";
     $questao[0][0] = array("MC Cabelinho, Baco Exu do Blues e Delacruz", true);
     $questao[0][1] = array("MC Cabelinho e Belo", false);
     $questao[0][2] = array("KayBlack, Baco Exu do Blues e Nagalli", false);
-    $questao[0][3] = array("Veigh e Mc Luanna", false);
+    $questao[0][3] = array("Veigh e MC Luanna", false);
 
     #Q2
     $questao[1]['perguntas'] = "Que música é esta?";
@@ -95,24 +97,43 @@
             $questao1 == 0){
             $msg = "Que Pena, Você Errou :(";
         }
+
+        #PLACAR
+        if (isset($_POST["placar"])){
+            $placar = $_POST["placar"] + 10;
+        } else {
+        }
+        
     }
 
     function exibirQuestao($ordem){
         global $questao;
         global $msg;
+    
 ?>
 
 <h2><p><label><?php echo $questao[$ordem]['perguntas']?></label></p></h2>
 
     <div class="box">
         <img class="capa" src="trap.jpg" alt="">
-        <audio class="audio" src="link aqui" controls></audio></p>
+        <audio class="audio" src="01Intenção.mp3" controls <?php echo $questao[$ordem][0][0];?>]></audio></p>
+        <audio class="audio" src="02LuisV.mp3" controls <?php echo $questao[$ordem][1][0];?>]></audio></p>
+        <audio class="audio" src="03PerdoaPortudoVida.mp3" controls <?php echo $questao[$ordem][2][0];?>]></audio></p>
+        <audio class="audio" src="04CartaoBlack.mp3" controls <?php echo $questao[$ordem][3][0];?>]></audio></p>
+        <audio class="audio" src="05VestidodaFendi.mp3" controls <?php echo $questao[$ordem][4][0];?>]></audio></p>
+        <audio class="audio" src="06AmaOJeitoQueMeOdeia.mp3" controls <?php echo $questao[$ordem][5][0];?>]></audio></p>
+        <audio class="audio" src="07Vampiro.mp3" controls <?php echo $questao[$ordem][6][0];?>]></audio></p>
+        <audio class="audio" src="08Quervoar.mp3" controls <?php echo $questao[$ordem][7][0];?>]></audio></p>
+        <audio class="audio" src="01ConexoesdeMafia.mp3" controls <?php echo $questao[$ordem][8][0];?>]></audio></p>
+        <audio class="audio" src="10BercodoTrap.mp3" controls <?php echo $questao[$ordem][9][0];?>]></audio></p>
     </div>
 
     <h3><input type="radio" name="questao" value="1"/><?php echo $questao[$ordem][0][0]; ?>  <br/>
     <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][1][0]; ?> <br/>
     <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][2][0]; ?> <br/>
     <input type="radio" name="questao" value="0"/><?php echo $questao[$ordem][3][0]; ?> <br/></p></h3>
+
+
 
 <h3 class = "mensagem"><?php echo $msg?></h3></td>
 
@@ -121,6 +142,13 @@
 <?php
     }
 
+    function exibirPlacar($placar){
+        global $placar;
+
+?>
+
+<?php
+     }
 ?>
 
 <!DOCTYPE html>
@@ -139,7 +167,7 @@
         width:70%;
         display: flex;
         align-items: center;
-        background: darkblue;
+        background: darkslateblue;
         border-radius: 1px;
         box-shadow: 0 .5px 1px black;
         overflow: hidden;
@@ -163,15 +191,63 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+    footer{
+       
+       position: fixed;
+       bottom:0;
+       left:0;
+       color: white;
+       background-color:rgb(7, 7, 7);
+       width: 100%;
+       text-align: left;
+       font-family:Arial, Helvetica, sans-serif;
+       padding-top: 10px;
+       padding-left: 20px;
+       padding-right: 20px;
+       padding-bottom: 10px;
+       font-size: 13px;
+       font-weight: bold;
+   
+       }
+      .footerright{
+          float: right;
+      }
+   
+      .footerleft{
+       float: left;
+   }
 </style>
 <body class="musica">
     <form method = "POST" action="Trap_1.php">
     
             <input type="text" name="ordemq" value="<?php echo $ordemq ?>"/>
-    
-
             <?php exibirQuestao( $ordemq) ?>
+
+            <input type="text" name="placar" value="<?php echo $placar ?>"/>
+            <?php exibirPlacar($placar)?>
         
     </form>
+
+    
+<footer>
+ <div class="footerleft">
+ Trabalho para disciplina de Programação pra Internet <br>
+    Professor: Éberton Marinho <br>
+    Unidade 1
+ </div>           
+
+
+<div class="footerright">
+ Desenvolvedores <br>
+Alexandra Galvão - alexandra.galvao@escolar.ifrn.edu.br <br>
+Eliel Ewerton - eliel.ewerton@escolar.ifrn.edu.br <br>
+Iasmim Dias - iasmim.dias@escolar.ifrn.edu.br <br>
+João Victor Lima - victor.lima@escolar.ifrn.edu.br <br>
+Kaliny Gomes - kaliny.g@escolar.ifrn.edu.br
+</div>
+
+
+</footer>
+
 </body>
 </html>

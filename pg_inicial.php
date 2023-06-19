@@ -12,19 +12,19 @@
     <div >
         <form action="">
         <h1>
-            QUAL É A MÚSICA?
+            DE QUEM É A MÚSICA?
         </h1>
         <p class= "nome"> 
         <label for="nome">Digite seu nome: </label> 
         <input type="text" name="nome" id="nome"/>
-         <button type="button" class="btn btn-primary ">Jogar</button>
+        <button type="button" class="btn btn-primary "><a href="categoria.html">Jogar</a></button>
         </p>
       
         
         <div class="imgcategorias">
-        <img src="poppb.jpg" class="img-thumbnail" alt="..." width="300px" a href="Trap_1.php">
+        <img src="trappb.jpg" class="img-thumbnail" alt="..." width="300px" a href="Trap_1.php">
         <img src="sertanejopb.jpg" class="img-thumbnail" alt="..." width="300px">
-        <img src="trappb.jpg" class="img-thumbnail" alt="..." width="300px">
+        <img src="poppb.jpg" class="img-thumbnail" alt="..." width="300px">
         </div>
         
         </form>

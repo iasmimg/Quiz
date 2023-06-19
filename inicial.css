@@ -13,6 +13,7 @@
     }
     .imgcategorias{
         margin-top: 50px;
+       
     }
             
     footer{
@@ -45,6 +46,14 @@
         text-align: right;
         position: fixed;
     }
+
+.button
+{
+    text-decoration: none;
+    color: white;
+}
+
+
 
 
 
